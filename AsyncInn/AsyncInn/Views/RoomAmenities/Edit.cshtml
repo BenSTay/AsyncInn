@@ -1,4 +1,4 @@
-﻿@model AsyncInn.Models.Amenities
+﻿@model AsyncInn.Models.RoomAmenities
 
 @{
     ViewData["Title"] = "Edit";
@@ -6,18 +6,14 @@
 
 <h1>Edit</h1>
 
-<h4>Amenities</h4>
+<h4>RoomAmenities</h4>
 <hr />
 <div>
     <div>
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly"></div>
-            <input type="hidden" asp-for="ID" />
-            <div>
-                <label asp-for="Name"></label>
-                <input asp-for="Name"/>
-                <span asp-validation-for="Name"></span>
-            </div>
+            <input type="hidden" asp-for="RoomID" />
+            <input type="hidden" asp-for="AmenitiesID" />
             <div>
                 <input type="submit" value="Save"/>
             </div>

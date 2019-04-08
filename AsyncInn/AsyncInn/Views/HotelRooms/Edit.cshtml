@@ -1,0 +1,41 @@
+﻿@model AsyncInn.Models.HotelRoom
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>HotelRoom</h4>
+<hr />
+<div>
+    <div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly"></div>
+            <input type="hidden" asp-for="HotelID" />
+            <input type="hidden" asp-for="RoomNumber" />
+            <div>
+                <label asp-for="RoomID"></label>
+                <select asp-for="RoomID" asp-items="ViewBag.RoomID"></select>
+                <span asp-validation-for="RoomID"></span>
+            </div>
+            <div>
+                <label asp-for="Rate"></label>
+                <input asp-for="Rate"/>
+                <span asp-validation-for="Rate"></span>
+            </div>
+            <div>
+                <label>
+                    <input asp-for="PetFriendly" /> @Html.DisplayNameFor(model => model.PetFriendly)
+                </label>
+            </div>
+            <div>
+                <input type="submit" value="Save"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
