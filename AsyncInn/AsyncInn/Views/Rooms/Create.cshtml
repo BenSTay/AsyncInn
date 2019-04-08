@@ -19,7 +19,7 @@
             </div>
             <div>
                 <label asp-for="Layout"></label>
-                <select asp-for="Layout"></select>
+                <select asp-for="Layout" asp-items="Html.GetEnumSelectList<AsyncInn.Models.Layout>()"></select>
                 <span asp-validation-for="Layout"></span>
             </div>
             <div>
