@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Rooms - Details";
+    
 }
 
 <h1 class="title">Room Details</h1>
@@ -22,6 +23,18 @@
         <dd>
             @Html.DisplayFor(model => model.Layout)
         </dd>
+        <dt>
+            Amenities:
+        </dt>
+        @{
+            var amenitiesList = ViewData["Amenities"] as List<string>;
+            foreach (string amenity in amenitiesList)
+            {
+                <dd>
+                    @amenity;
+                </dd>
+            }
+        } 
     </dl>
 </div>
 <div>

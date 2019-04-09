@@ -14,7 +14,6 @@ namespace AsyncInn.Data
 
         }
 
-        // TODO: seed database (5 hotels, 6 rooms, 5 amenities)
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<HotelRoom>()

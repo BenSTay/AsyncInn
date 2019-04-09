@@ -36,6 +36,8 @@ namespace AsyncInn.Controllers
                 return NotFound();
             }
 
+            ViewData["Amenities"] = await _rooms.GetRoomAmenities(id);
+
             return View(room);
         }
 

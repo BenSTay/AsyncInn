@@ -35,6 +35,8 @@ namespace AsyncInn.Controllers
                 return NotFound();
             }
 
+            ViewData["HotelRooms"] = await _hotels.GetHotelRooms(id);
+
             return View(hotel);
         }
 

@@ -40,6 +40,18 @@
         <dd>
             @Html.DisplayFor(model => model.Phone)
         </dd>
+        <dt>
+            Rooms:
+        </dt>
+        @{ 
+            var hotelRooms = ViewData["HotelRooms"] as List<AsyncInn.Models.HotelRoom>;
+            foreach (var room in hotelRooms)
+            {
+                <dd>
+                    #@room.RoomNumber $@room.Rate /night @if (room.PetFriendly) { <b>(Pet Friendly)</b> }
+                </dd>
+            }
+        }
     </dl>
 </div>
 <div>

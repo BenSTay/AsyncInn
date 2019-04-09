@@ -55,6 +55,23 @@ namespace AsyncInn.Models.Services
             return await _context.Rooms.FindAsync(id);
         }
 
+        public async Task<List<string>> GetRoomAmenities(int roomId)
+        {
+            List<int> amenityIds = await _context.RoomAmenities.Where(c => c.RoomID == roomId)
+                .Select(c => c.AmenitiesID).ToListAsync();
+
+            List<string> amenityNames = new List<string>();
+            Amenities amenity;
+
+            foreach (int id in amenityIds)
+            {
+                amenity = await _context.Amenities.FindAsync(id);
+                amenityNames.Add(amenity.Name);
+            }
+
+            return amenityNames;
+        }
+
         /// <summary>
         /// Gets all rooms in the dbcontext.
         /// </summary>

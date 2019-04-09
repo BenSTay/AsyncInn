@@ -15,6 +15,7 @@ namespace AsyncInn.Models.Interfaces
 
         // Read All
         Task<List<Room>> GetRooms();
+        Task<List<string>> GetRoomAmenities(int roomId);
 
         // Update
         Task<bool> UpdateRoom(int id, Room room);
