@@ -15,23 +15,12 @@ nav a:hover {
     transition: color .2s;
 }
 
-.title {
-    font-family: 'Yellowtail', cursive;
-    color: #333;
-    font-size: 2.5em;
-    text-align: center;
-    margin: 2em, 0, 0, 0;
-}
-
-.back {
-    display:block;
-    font-family: 'Gravitas One', serif;
-    color: #333;
-    font-size: 1.75em;
-    text-align: center;
-}
-
-.back:hover {
+.back:hover, .create:hover {
     color: #000;
     transition: color .2s;
+}
+
+#renderbody {
+    width: 80%;
+    margin: auto;
 }

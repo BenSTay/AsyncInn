@@ -7,7 +7,7 @@
 <h1 class="title">Room Amenities</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="create">Create New</a>
 </p>
 <table>
     <thead>
@@ -30,7 +30,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Amenities.ID)
             </td>
-            <td>
+            <td class="crudlinks">
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })

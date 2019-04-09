@@ -7,7 +7,7 @@
 <h1 class="title">Hotels</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="create">Create New</a>
 </p>
 <table>
     <thead>
@@ -48,7 +48,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Phone)
             </td>
-            <td>
+            <td class="crudlinks">
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
