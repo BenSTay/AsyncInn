@@ -9,7 +9,9 @@ namespace AsyncInn.Models
     public enum Layout
     {
         Studio,
+        [Display(Name = "One Bedroom")]
         OneBedroom,
+        [Display(Name = "Two Bedroom")]
         TwoBedroom
     }
 

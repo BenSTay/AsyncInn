@@ -1,2 +1,65 @@
-﻿body {
+﻿header {
+    background-color: white;
+}
+
+nav {
+    margin-top: .5em;
+    background-color: #333;
+}
+
+nav li {
+    display: inline-block;
+    font-family: 'Gravitas One';
+    font-size: 1.25em;
+    margin: .5em;
+}
+
+nav a {
+    color: #DDD;
+    text-decoration: none;
+}
+
+.title {
+    font-family: 'Yellowtail', cursive;
+    color: #333;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 16px;
+}
+
+.back, .create {
+    display: block;
+    font-family: 'Gravitas One', serif;
+    color: #333;
+    font-size: 1.75em;
+    text-align: center;
+}
+
+table, form {
+    background-color: white;
+    border-radius: 8px;
+    margin: auto;
+    width: 80%;
+    padding: 16px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+th {
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 8px;
+}
+
+td {
+    border: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    text-align: center;
+    padding: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.crudlinks {
+    border-right: none;
 }

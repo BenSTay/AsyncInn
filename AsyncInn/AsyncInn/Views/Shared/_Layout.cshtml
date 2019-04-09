@@ -14,8 +14,24 @@
     <header>
         <h1 id="logo">Async Inn</h1>
         <h1 id="slogan">Live Asynchronously!</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li>
+                    <a asp-controller="Hotels" asp-action="Index">Hotels</a>
+                </li>
+                <li>
+                    <a asp-controller="Rooms" asp-action="Index">Rooms</a>
+                </li>
+                <li>
+                    <a asp-controller="Amenities" asp-action="Index">Amenities</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <div>
+    <div id="renderbody">
         @RenderBody()
     </div>
 </body>

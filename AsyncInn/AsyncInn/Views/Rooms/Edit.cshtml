@@ -1,0 +1,35 @@
+﻿@model AsyncInn.Models.Room
+
+@{
+    ViewData["Title"] = "Rooms - Edit";
+}
+
+<h1 class="title">Edit Room</h1>
+
+<h4>Room</h4>
+<hr />
+<div>
+    <div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly"></div>
+            <input type="hidden" asp-for="ID" />
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name"/>
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div>
+                <label asp-for="Layout"></label>
+                <select asp-for="Layout"></select>
+                <span asp-validation-for="Layout"></span>
+            </div>
+            <div>
+                <input type="submit" value="Save"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="back">Back to List</a>
+</div>

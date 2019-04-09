@@ -11,9 +11,11 @@ namespace AsyncInn.Models
     {
         [Key]
         [ForeignKey("Room")]
+        [Display(Name = "Room Type")]
         public int RoomID { get; set; }
         [Key]
         [ForeignKey("Amenities")]
+        [Display(Name = "Amenity Type")]
         public int AmenitiesID { get; set; }
 
         public Room Room { get; set; }

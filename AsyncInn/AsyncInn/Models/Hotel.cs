@@ -11,6 +11,7 @@ namespace AsyncInn.Models
         [Key]
         public int ID { get; set; }
         public string Name { get; set; }
+        [Display(Name = "Street Address")]
         public string StreetAddress { get; set; }
         public string City { get; set; }
         public string State { get; set; }
