@@ -1,2 +1,21 @@
-﻿body {
+﻿header {
+    background-color: white;
 }
+
+nav {
+    margin-top: .5em;
+    background-color: #333;
+}
+
+nav li {
+    display: inline-block;
+    font-family: 'Gravitas One';
+    font-size: 1.25em;
+    margin: .5em;
+}
+
+nav a {
+    color: #DDD;
+    text-decoration: none;
+}
+
