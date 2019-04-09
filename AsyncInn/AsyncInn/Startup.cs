@@ -33,6 +33,7 @@ namespace AsyncInn
 
             services.AddScoped<IHotelManager, HotelService>();
             services.AddScoped<IRoomManager, RoomService>();
+            services.AddScoped<IAmenityManager, AmenityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -17,12 +17,22 @@ namespace AsyncInn.Models.Services
             _context = context;
         }
 
+        /// <summary>
+        /// Adds a room to the dbcontext.
+        /// </summary>
+        /// <param name="room">The room being added.</param>
+        /// <returns>The result of SaveChangesAsync</returns>
         public async Task CreateRoom(Room room)
         {
             await _context.Rooms.AddAsync(room);
             await _context.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Removes a room from the dbcontext.
+        /// </summary>
+        /// <param name="id">The rooms id.</param>
+        /// <returns>A boolean representing if the room was deleted.</returns>
         public async Task<bool> DeleteRoom(int id)
         {
             Room room = await GetRoom(id);
@@ -35,16 +45,31 @@ namespace AsyncInn.Models.Services
             }
         }
 
+        /// <summary>
+        /// Gets a room from the dbcontext by its id.
+        /// </summary>
+        /// <param name="id">The rooms id.</param>
+        /// <returns>A room.</returns>
         public async Task<Room> GetRoom(int id)
         {
             return await _context.Rooms.FindAsync(id);
         }
 
+        /// <summary>
+        /// Gets all rooms in the dbcontext.
+        /// </summary>
+        /// <returns>A list of rooms.</returns>
         public async Task<List<Room>> GetRooms()
         {
             return await _context.Rooms.ToListAsync();
         }
 
+        /// <summary>
+        /// Updates an existing room in the dbcontext.
+        /// </summary>
+        /// <param name="id">The ID of the room.</param>
+        /// <param name="room">The new room.</param>
+        /// <returns>A boolean representing if the update was successful.</returns>
         public async Task<bool> UpdateRoom(int id, Room room)
         {
             Room old = await GetRoom(id);
