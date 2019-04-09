@@ -1,10 +1,10 @@
 ﻿@model AsyncInn.Models.Hotel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Hotels - Details";
 }
 
-<h1 class="title">Details</h1>
+<h1 class="title">Hotel Details</h1>
 
 <div>
     <h4>Hotel</h4>
@@ -44,5 +44,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="back">Back to List</a>
 </div>

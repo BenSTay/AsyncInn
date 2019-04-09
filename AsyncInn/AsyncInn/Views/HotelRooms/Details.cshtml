@@ -1,10 +1,10 @@
 ﻿@model AsyncInn.Models.HotelRoom
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Hotel Rooms - Details";
 }
 
-<h1 class="title">Details</h1>
+<h1 class="title">Hotel Room Details</h1>
 
 <div>
     <h4>HotelRoom</h4>
@@ -38,5 +38,5 @@
 </div>
 <div>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="back">Back to List</a>
 </div>

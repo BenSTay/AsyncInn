@@ -12,7 +12,7 @@
 
 nav a:hover {
     color: #FFF;
-    transition: color .5s;
+    transition: color .2s;
 }
 
 .title {
@@ -23,3 +23,15 @@ nav a:hover {
     margin: 2em, 0, 0, 0;
 }
 
+.back {
+    display:block;
+    font-family: 'Gravitas One', serif;
+    color: #333;
+    font-size: 1.75em;
+    text-align: center;
+}
+
+.back:hover {
+    color: #000;
+    transition: color .2s;
+}
