@@ -1,6 +1,6 @@
 # AsyncInn
 **Author**: Benjamin Taylor  
-**Version**: 1.1.0
+**Version**: 1.2.0
 
 ## Overview
 A ASP.NET web application designed to simulate a hotel inventory system.
@@ -31,3 +31,4 @@ Written with Visual Studio Community 2019.
 ## Change Log
 - **04-04-2019 9:37PM** - Initial Version
 - **08-04-2018 8:20PM** - Added CRUD UI, data seeding
+- **09-04-2018 7:33PM** - Added dependency injection
