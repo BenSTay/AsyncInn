@@ -9,11 +9,9 @@ namespace AsyncInn.Models
 {
     public class HotelRoom
     {
-        [Key]
         [ForeignKey("Hotel")]
         [Display(Name = "Hotel")]
         public int HotelID { get; set; }
-        [Key]
         [Display(Name = "Room Number")]
         public int RoomNumber { get; set; }
         [ForeignKey("Room")]
