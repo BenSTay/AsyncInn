@@ -55,9 +55,16 @@ namespace AsyncInn.Models.Services
             return await _context.Hotels.FindAsync(id);
         }
 
+        /// <summary>
+        /// Gets all rooms in a hotel.
+        /// </summary>
+        /// <param name="hotelId">The hotels id.</param>
+        /// <returns>A list of HotelRooms.</returns>
         public async Task<List<HotelRoom>> GetHotelRooms(int hotelId)
         {
-            return await _context.HotelRooms.Where(c => c.HotelID == hotelId)
+            return await _context.HotelRooms
+                .Where(c => c.HotelID == hotelId)
+                .Include(c => c.Room)
                 .ToListAsync();
         }
 

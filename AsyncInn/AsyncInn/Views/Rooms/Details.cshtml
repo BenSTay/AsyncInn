@@ -27,11 +27,11 @@
             Amenities:
         </dt>
         @{
-            var amenitiesList = ViewData["Amenities"] as List<string>;
-            foreach (string amenity in amenitiesList)
+            var amenitiesList = ViewData["Amenities"] as List<AsyncInn.Models.RoomAmenities>;
+            foreach (var amenity in amenitiesList)
             {
                 <dd>
-                    @amenity;
+                    @amenity.Amenities.Name
                 </dd>
             }
         } 

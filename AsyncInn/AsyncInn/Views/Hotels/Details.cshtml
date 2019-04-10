@@ -48,7 +48,7 @@
             foreach (var room in hotelRooms)
             {
                 <dd>
-                    #@room.RoomNumber $@room.Rate /night @if (room.PetFriendly) { <b>(Pet Friendly)</b> }
+                    #@room.RoomNumber - @room.Room.Name, $@room.Rate /night @if (room.PetFriendly) { <b>(Pet Friendly)</b> }
                 </dd>
             }
         }
